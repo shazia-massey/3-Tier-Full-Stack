@@ -64,12 +64,12 @@ spec:
                   key: SECRET
           livenessProbe:
             httpGet:
-              path: /
+              path: /health
               port: 3000
             initialDelaySeconds: 30
           readinessProbe:
             httpGet:
-              path: /
+              path: /ready
               port: 3000
             initialDelaySeconds: 30
 
