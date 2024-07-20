@@ -1,16 +1,15 @@
----
 apiVersion: v1
 kind: Secret
 metadata:
   name: yelp-camp-secrets
 type: Opaque
 data:
-  CLOUDINARY_CLOUD_NAME=ZG91dWZ3c3VsCg==
-  CLOUDINARY_KEY=NzI1MTQyOTkzNTI4NTcyCg==
-  CLOUDINARY_SECRET=VXV3MmJVempoczdEcnhoNjM2dWVZRXI5V3hZCg==
-  MAPBOX_TOKEN=c2suZXlKMUlqb2liV0Z6YzJWNWN5SXNJbUVpT2lKamJIbGhPR3BoYW5Rd05URnBNbkZ5TW5ZM1luUjRlRzA0SW4wLl9PaU1RV19LdU40eGdtTVR1SlFTM3cK
-  DB_URL=bW9uZ29kYitzcnY6Ly9tYXNzZXlzczEyMzpqWkFuTHZYekVGTGVZQzBCQHNoYXppYS1kcy5xNXVhZ3FwLm1vbmdvZGIubmV0Lz9yZXRyeVdyaXRlcz10cnVlJnc9bWFqb3JpdHkmYXBwTmFtZT1TaGF6aWEtRFMK
-  SECRET=ZGV2b3BzCg==
+  CLOUDINARY_CLOUD_NAME: ZG91dWZ3c3VsCg==
+  CLOUDINARY_KEY: NzI1MTQyOTkzNTI4NTcyCg==
+  CLOUDINARY_SECRET: VXV3MmJVempoczdEcnhoNjM2dWVZRXI5V3hZCg==
+  MAPBOX_TOKEN: c2suZXlKMUlqb2liV0Z6YzJWNWN5SXNJbUVpT2lKamJIbGhPR3BoYW5Rd05URnBNbkZ5TW5ZM1luUjRlRzA0SW4wLl9PaU1RV19LdU40eGdtTVR1SlFTM3cK
+  DB_URL: bW9uZ29kYitzcnY6Ly9tYXNzZXlzczEyMzpqWkFuTHZYekVGTGVZQzBCQHNoYXppYS1kcy5xNXVhZ3FwLm1vbmdvZGIubmV0Lz9yZXRyeVdyaXRlcz10cnVlJnc9bWFqb3JpdHkmYXBwTmFtZT1TaGF6aWEtRFMK
+  SECRET: ZGV2b3BzCg==
 
 ---
 apiVersion: apps/v1
@@ -67,12 +66,12 @@ spec:
             httpGet:
               path: /
               port: 3000
-            initialDelaySeconds: 30   # Adjust the initial delay here
+            initialDelaySeconds: 30
           readinessProbe:
             httpGet:
               path: /
               port: 3000
-            initialDelaySeconds: 30   # Adjust the initial delay here
+            initialDelaySeconds: 30
 
 ---
 apiVersion: v1
